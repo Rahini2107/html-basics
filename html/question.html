@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("button").click(function(){
+            var fruits = [];
+            $.each($("input[name='fruit']:checked"), function(){            
+                fruits.push($(this).val());
+            });
+            document.getElementById("result").innerHTML=fruits
+        });
+    });
+</script>
+</head>
+<body>
+<form >
+<h1>What Kind of fruits you like?</h1>
+<input type="checkbox" name="fruit" value="Apple">Apple<br>
+<input type="checkbox" name="fruit" value="Banana">Banana<br>
+<input type="checkbox" name="fruit" value="Orange">Orange<br>
+<input type="checkbox" name="fruit" value="Strawberry">Strawberry<br>
+<input type="checkbox" name="fruit" value="Blueberry">Blueberry<br>
+<button type="button">Submit </button>
+<h3 id="result"></h3>
+</form>
+</body>
+</html>
