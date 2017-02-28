@@ -1,0 +1,47 @@
+<html>
+<head>
+<link rel="stylesheet" href="style1.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("button").click(function(){
+
+
+            var language = [];
+            $.each($("input[name='language']:checked"), function(){            
+                language.push($(this).val());
+            });
+	    var username=$("#username").val();
+	var mailid=$("#mailid").val();
+	var phoneno=$("#phoneno").val();
+	document.getElementById("name").innerHTML=username
+ 	document.getElementById("mail").innerHTML=mailid
+	document.getElementById("phone").innerHTML=phoneno
+ 	document.getElementById("result").innerHTML=language
+        });
+    });
+</script>
+</head>
+<body>
+<h1>FORM</h1>
+<form>
+Username:<input type="text" id="username"name="username" value="" /><br><br>
+mail id:<input type="text" id="mailid" name="mailid" value=""/><br><br>
+password:<input type="password"  name="password"/><br><br>
+phone no:<input type="value" id="phoneno" name="phoneno" value=""/><br><br>
+Gender: <input type="checkbox" name="male">Male<input type="checkbox" name="female">Female
+<p>What programming language you know?</p>
+<input type="checkbox" name="language" value="HTML">HTML<br>
+<input type="checkbox" name="language" value="CSS">CSS<br>
+<input type="checkbox" name="language" value="C">C<br>
+<input type="checkbox" name="language" value="C++">C++<br>
+<input type="checkbox" name="language" value="JAVA">JAVA<br><br>
+<button type="button">Submit </button>
+<p id="name"></p>
+<p id="mail"></p>
+<p id="phone"></p>
+<h3 id="result"></h3>
+
+</form>
+</body>
+</html>
